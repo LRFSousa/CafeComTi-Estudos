@@ -1,6 +1,16 @@
 import { Search } from "lucide-react";
+
 import { useEffect, useState } from "react";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 interface Materia {
   _id: number;
   nome: string;
@@ -14,8 +24,8 @@ interface Assunto {
 function Questoes() {
   const [materias, setMaterias] = useState<Materia[]>([]);
   const [assuntos, setAssuntos] = useState<Assunto[]>([]);
-  const [materiaSelecionada, setMateriaSelecionada] = useState("placeholder");
-  const [assuntoSelecionado, setAssuntoSelecionado] = useState("placeholder");
+  const [materiaSelecionada, setMateriaSelecionada] = useState("");
+  const [assuntoSelecionado, setAssuntoSelecionado] = useState("");
 
   function getMateriaIdByNome(nome: string): number | null {
     const materia = materias.find((m) => m.nome === nome);
@@ -55,51 +65,57 @@ function Questoes() {
         <h6>Minhas Questões</h6>
       </div>
       <div>
-        <form method="POST" action="#" className="flex items-center w-full">
-          <input
+        <form
+          method="POST"
+          action="#"
+          className="flex items-center w-full gap-x-2"
+        >
+          <Input
             type="text"
             name="query"
             placeholder="Search"
             title="Enter a search keyword"
-            className="w-full border border-[rgba(1,41,112,0.2)] text-[#012970] text-sm px-2 py-1.5 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-all"
+            className="ml-2 w-52 px-4 py-2 border rounded-lg border-[rgba(1,41,112,0.2)] text-[#012970] text-sm focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-all"
           />
-          <button
+          <Button
             type="submit"
             title="Search"
-            className="ml-2 px-3 py-2 border-0 bg-[#012970] rounded-full hover:bg-blue-500 transition"
+            className="px-3 py-2 bg-[#012970] text-white hover:bg-blue-500 transition flex items-center justify-center"
           >
-            <Search className="w-4 h-4 text-white" />
-          </button>
+            <Search className="w-4 h-4" />
+          </Button>
 
-          <select
+          <Select
             value={materiaSelecionada}
-            onChange={(e) => setMateriaSelecionada(e.target.value)}
-            className="ml-4 w-72 px-4 py-2 border rounded-lg border-[rgba(1,41,112,0.2)] text-[#012970] text-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-all"
+            onValueChange={(value) => setMateriaSelecionada(value)}
           >
-            <option value="placeholder" disabled hidden>
-              Matéria
-            </option>
-            {materias.map((materia) => (
-              <option key={materia._id} value={materia.nome}>
-                {materia.nome}
-              </option>
-            ))}
-          </select>
+            <SelectTrigger className="ml-4 w-52 px-4 py-2 border rounded-lg border-[rgba(1,41,112,0.2)] text-[#012970] text-sm focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-all">
+              <SelectValue placeholder="Matéria" />
+            </SelectTrigger>
+            <SelectContent>
+              {materias.map((materia) => (
+                <SelectItem key={materia._id} value={materia.nome}>
+                  {materia.nome}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
 
-          <select
+          <Select
             value={assuntoSelecionado}
-            onChange={(e) => setAssuntoSelecionado(e.target.value)}
-            className="ml-4 min-w-[200px] px-4 py-2 border border-[rgba(1,41,112,0.2)] text-[#012970] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-all"
+            onValueChange={(value) => setAssuntoSelecionado(value)}
           >
-            <option value="placeholder" disabled hidden>
-              Assuntos
-            </option>
-            {assuntos.map((assuntos) => (
-              <option key={assuntos._id} value={assuntos.nome}>
-                {assuntos.nome}
-              </option>
-            ))}
-          </select>
+            <SelectTrigger className="ml-4 w-52 px-4 py-2 border rounded-lg border-[rgba(1,41,112,0.2)] text-[#012970] text-sm focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-all">
+              <SelectValue placeholder="Assunto" />
+            </SelectTrigger>
+            <SelectContent>
+              {assuntos.map((assunto) => (
+                <SelectItem key={assunto._id} value={assunto.nome}>
+                  {assunto.nome}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </form>
       </div>
     </div>
