@@ -2,7 +2,7 @@
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "../components/layout/Header/MainLayout";
 import Dashboard from "../pages/dashboard/Dashboard";
-import Questoes from "../pages/Questoes";
+import Questoes from "../pages/questoes/Questoes";
 
 function Home() {
   return <div className="p-4">Página Inicial</div>;
