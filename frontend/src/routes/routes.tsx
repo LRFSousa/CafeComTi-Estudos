@@ -1,7 +1,7 @@
 // src/routes/routes.tsx
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "../components/layout/Header/MainLayout";
-import Dashboard from "../pages/Dashboard";
+import Dashboard from "../pages/dashboard/Dashboard";
 import Questoes from "../pages/Questoes";
 
 function Home() {
