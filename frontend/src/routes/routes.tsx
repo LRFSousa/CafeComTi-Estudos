@@ -17,7 +17,7 @@ export default function AppRoutes() {
         <Route index element={<Home />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="questoes" element={<Questoes />} />
-        <Route path="questoes2" element={<QuestoesTec materias={[]} />} />
+        <Route path="questoes2" element={<QuestoesTec />} />
       </Route>
     </Routes>
   );
