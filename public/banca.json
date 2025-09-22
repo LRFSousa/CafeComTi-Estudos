@@ -1,0 +1,28 @@
+{
+  "banca": [
+    {
+      "_id": 1,
+      "nome": "FCC"
+    },
+    {
+      "_id": 2,
+      "nome": "FGV"
+    },
+    {
+      "_id": 3,
+      "nome": "Vunesp"
+    },
+    {
+      "_id": 4,
+      "nome": "Cespe/Cebraspe"
+    },
+    {
+      "_id": 5,
+      "nome": "Fundatec"
+    },
+    {
+      "_id": 6,
+      "nome": "Funcab"
+    }
+  ]
+}

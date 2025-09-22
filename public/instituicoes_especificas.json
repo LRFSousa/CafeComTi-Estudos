@@ -1,0 +1,104 @@
+{
+  "instituicoes_especificas": [
+    {
+      "_id": 1,
+      "nome": "TRT1",
+      "instituicaoId": 1
+    },
+    {
+      "_id": 2,
+      "nome": "TRT2",
+      "instituicaoId": 1
+    },
+    {
+      "_id": 3,
+      "nome": "TRT3",
+      "instituicaoId": 1
+    },
+    {
+      "_id": 4,
+      "nome": "TST",
+      "instituicaoId": 1
+    },
+    {
+      "_id": 5,
+      "nome": "CGE-SP",
+      "instituicaoId": 2
+    },
+    {
+      "_id": 6,
+      "nome": "CGE-SC",
+      "instituicaoId": 2
+    },
+    {
+      "_id": 7,
+      "nome": "CGU",
+      "instituicaoId": 2
+    },
+    {
+      "_id": 8,
+      "nome": "Polícia Federal",
+      "instituicaoId": 3
+    },
+    {
+      "_id": 9,
+      "nome": "Polícia Rodoviária Federal",
+      "instituicaoId": 3
+    },
+    {
+      "_id": 10,
+      "nome": "Polícia Civil de SP",
+      "instituicaoId": 3
+    },
+    {
+      "_id": 11,
+      "nome": "Prefeitura de São Paulo",
+      "instituicaoId": 4
+    },
+    {
+      "_id": 12,
+      "nome": "Prefeitura de Porto Alegre",
+      "instituicaoId": 4
+    },
+    {
+      "_id": 13,
+      "nome": "ALESP",
+      "instituicaoId": 5
+    },
+    {
+      "_id": 14,
+      "nome": "ALMG",
+      "instituicaoId": 5
+    },
+    {
+      "_id": 15,
+      "nome": "MPF",
+      "instituicaoId": 6
+    },
+    {
+      "_id": 16,
+      "nome": "MPSP",
+      "instituicaoId": 6
+    },
+    {
+      "_id": 17,
+      "nome": "DPU",
+      "instituicaoId": 7
+    },
+    {
+      "_id": 18,
+      "nome": "DPE-RJ",
+      "instituicaoId": 7
+    },
+    {
+      "_id": 19,
+      "nome": "CFA",
+      "instituicaoId": 8
+    },
+    {
+      "_id": 20,
+      "nome": "CFC",
+      "instituicaoId": 8
+    }
+  ]
+}

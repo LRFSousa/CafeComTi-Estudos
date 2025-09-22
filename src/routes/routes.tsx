@@ -1,0 +1,24 @@
+// src/routes/routes.tsx
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "../components/layout/Header/MainLayout";
+import Dashboard from "../pages/dashboard/Dashboard";
+import Questoes from "@/pages/questoes/Questoes";
+import QuestoesTec from "@/pages/questoes/QuestoesTec";
+
+function Home() {
+  return <div className="p-4">Página Inicial</div>;
+}
+
+export default function AppRoutes() {
+  return (
+    <Routes>
+      {/* Layout com header e sidebar sempre presente */}
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="questoes" element={<Questoes />} />
+        <Route path="questoes2" element={<QuestoesTec />} />
+      </Route>
+    </Routes>
+  );
+}

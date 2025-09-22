@@ -1,0 +1,36 @@
+{
+  "instituicoes": [
+    {
+      "_id": 1,
+      "nome": "Tribunais"
+    },
+    {
+      "_id": 2,
+      "nome": "Controladorias"
+    },
+    {
+      "_id": 3,
+      "nome": "Polícias"
+    },
+    {
+      "_id": 4,
+      "nome": "Prefeituras"
+    },
+    {
+      "_id": 5,
+      "nome": "Assembleias Legislativas"
+    },
+    {
+      "_id": 6,
+      "nome": "Ministérios Públicos"
+    },
+    {
+      "_id": 7,
+      "nome": "Defensorias"
+    },
+    {
+      "_id": 8,
+      "nome": "Conselhos de Fiscalização"
+    }
+  ]
+}
