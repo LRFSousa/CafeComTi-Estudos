@@ -208,7 +208,7 @@ function Questoes() {
   };
 
   return (
-    <div className="mt-15 p-4 pt-4 bg-white min-h-screen rounded-lg pb-4 shadow">
+    <div className="mt-15 p-4 pt-4">
       <div className="mt-4">
         <h6>Minhas Questões</h6>
       </div>

@@ -2,8 +2,8 @@
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "../components/layout/Header/MainLayout";
 import Dashboard from "../pages/dashboard/Dashboard";
-import FiltroQuestoes from "@/pages/questoes/FiltroQuestoes";
 import QuestoesTec from "@/pages/questoes/QuestoesTec";
+import QuestoesPage from "@/pages/questoes/QuestoesPage";
 
 function Home() {
   return <div className="p-4">Página Inicial</div>;
@@ -16,7 +16,7 @@ export default function AppRoutes() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="dashboard" element={<Dashboard />} />
-        <Route path="questoes" element={<FiltroQuestoes />} />
+        <Route path="questoes" element={<QuestoesPage />} />
         <Route path="questoes2" element={<QuestoesTec />} />
       </Route>
     </Routes>
